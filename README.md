@@ -1,5 +1,5 @@
-## Linda Mama Front-end
-   Welcome to the front-end of the Linda Mama project. This is the user interface for the Linda Mama healthcare application, built using the React Framework.
+## Linda Mama Project
+   Welcome to the the Linda Mama project. This is the user interface for the Linda Mama healthcare application, built using the React Framework.
    Rails API serves as the foundation for the Linda Mama healthcare application, providing data and functionality to the front-end.
 
 
@@ -39,6 +39,8 @@ The Linda Mama front-end provides a user-friendly interface for mothers and doct
   2. Axios: Promise-based HTTP client for making API requests.
   3. React Router: Declarative routing for React applications.
   4. Bootstrap: CSS framework for responsive design.
+  5. Ruby on Rails
+  6. Postgresql database
 
 ## API Endpoints
 The Linda Mama API provides the following endpoints:
@@ -47,6 +49,7 @@ The Linda Mama API provides the following endpoints:
   3. GET /auth/verify: Verify the authenticity of a JWT token.
 
   Resource Endpoints:
+
   4. GET /doctors, GET /patients: Retrieve a list of doctors or patients.
   5. POST /patients/:patient_id/appointments, GET /patients/:patient_id/appointments: Manage appointments for patients.
   6. POST /patients/:patient_id/lab_results, GET /patients/:patient_id/  lab_results: Manage lab results for patients.
