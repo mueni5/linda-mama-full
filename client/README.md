@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+## Linda Mama Front-end
+   Welcome to the front-end of the Linda Mama project. This is the user interface for the Linda Mama healthcare application, built using the React Framework.
+   Rails API serves as the foundation for the Linda Mama healthcare application, providing data and functionality to the front-end.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Getting Started
+    Before you begin, make sure you have the following prerequisites:
+    Node.js (version 18.15.0)
+    npm (version 9.5.0)
 
-In the project directory, you can run:
+    To set up and run the front-end:
+    1. Clone this repository: git clone <repository_url>
+    2. Navigate to the project directory: cd linda_mama_frontend
+    3. Install dependencies: npm install
+    4. Start the development server: npm start
+    5. Open your browser and go to http://localhost:4000 to use the Linda Mama application.
 
-### `npm start`
+    back-end:
+    1. Install Ruby (version 2.7.4) and Rails.
+    2. Install dependencies: bundle install
+    3. Set up the database: rails db:create && rails db:migrate
+    4. Start the server: rails server
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  The API will be accessible at http://localhost:3000.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Features
+The Linda Mama front-end provides a user-friendly interface for mothers and doctors to interact with the healthcare system. Some of the features include:
 
-### `npm test`
+   1. User authentication and authorization; Allows doctors and mothers to create accounts.
+   2. Viewing and scheduling appointments with doctors. A mother's appointments will be displayed including any extra note the doctor made.
+   3. Calendar: A summary of all the mother's appointments.
+   4. Accessing and managing lab results.
+   5. BLOGS: Diet blog and Health blog
+   6. Chat forum where mothers can communicate with others
+   7. Our Team: Doctors' details including their contacts will be displayed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Technologies Used
+  1. React.js: JavaScript library for building user interfaces.
+  2. Axios: Promise-based HTTP client for making API requests.
+  3. React Router: Declarative routing for React applications.
+  4. Bootstrap: CSS framework for responsive design.
 
-### `npm run build`
+## API Endpoints
+The Linda Mama API provides the following endpoints:
+  1. POST /auth/login: User login and JWT token generation.
+  2. POST /auth/signup: User registration and JWT token generation.
+  3. GET /auth/verify: Verify the authenticity of a JWT token.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  Resource Endpoints:
+  4. GET /doctors, GET /patients: Retrieve a list of doctors or patients.
+  5. POST /patients/:patient_id/appointments, GET /patients/:patient_id/appointments: Manage appointments for patients.
+  6. POST /patients/:patient_id/lab_results, GET /patients/:patient_id/  lab_results: Manage lab results for patients.
+  7. GET/diet_blogs
+  8. GET/messages
+  9. POST/messages
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Database
+  The application uses PostgreSQL as the database. Make sure to configure your database settings in config/database.yml
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Contributors
+  1. Taffie Theuri
+  2. Roy Kimathi
+  3. Christine Mbuvi
+  4. Brigette Orina
+  5. Antony Mulinge
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### license
+  This project is licensed under the MIT License.
+   
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
